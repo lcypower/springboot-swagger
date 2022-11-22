@@ -67,6 +67,7 @@ public class MainController {
         return new ResponseEntity(param, HttpStatus.OK);
     }
 
+    @ApiOperation(value = "이거슨 json 포스트로 처리하는 api예염", notes = "설명 설명 설명")
     @PostMapping("/post")
     public ResponseEntity<Object> postMain(@RequestBody MainDTO.mainRequest param){
         return ResponseEntity.created(URI.create("/post/" + param.getId())).build();
